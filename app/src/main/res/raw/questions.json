@@ -1,0 +1,42 @@
+[
+  {
+    "question" : "The lekpz M41 Bulldog had a 156mm main cannon. ",
+    "answer" : false
+  },
+  {
+    "question" : "The BF109 tropical variant had its engine manufactured by Daimler-Benz.",
+    "answer" : true
+  },
+  {
+    "question" : "Handguns will usually take 10mm rounds.",
+    "answer" : false
+  },
+  {
+    "question" : "The UH1C 'Huey Hog' utilized a 20mm coaxial minigun mounted on its nose.",
+    "answer" : true
+  },
+  {
+    "question": "The AH1F Cobra was used in Vietnam as a light attack helicopter.",
+    "answer": false
+  },
+  {
+    "question" : "The Focke Wulf FW190 utilized a radial engine.",
+    "answer" : true
+  },
+  {
+    "question" : "The UH1C 'Huey Hog' implemented a mesh screen air filter for its turbine in order to protect it from dust in the harsh Vietnamese conditions.",
+    "answer" : true
+  },
+  {
+    "question" : "The UH1Y twin Venom was used widely in Vietnam theatres, particularly in Da Nang.",
+    "answer" : false
+  },
+  {
+    "question" : "The DeHavilland Hornet was used widely for air support in Afghanistan.",
+    "answer" : false
+  },
+  {
+    "question" : "The 'toe popper' was used widely against US forces by the Vietnamese.",
+    "answer" : true
+  }
+]
