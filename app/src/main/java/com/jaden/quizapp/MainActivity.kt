@@ -3,11 +3,14 @@ package com.jaden.quizapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View.INVISIBLE
 import android.widget.Button
 import android.widget.TextView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-//import raw.questions.json
+import com.jaden.quizapp.dataclasses.Question
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,24 +57,45 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate: $jsonText")
 
         val list = listOf("Question 1")
-/*
+
         val gson = Gson()
         val jsonString = gson.toJson(list)
         val type = object : TypeToken<List<Question>>() { }.type
-        val questions = gson.fromJson<List<Question>>(jsonString, type)
-        Log.d(TAG, "onCreate: \n${questions.toString()}") */
+        val questions = gson.fromJson<List<Question>>(jsonText, type)
+        Log.d(TAG, "onCreate: \n${questions.toString()}")
 
-        //val quiz = Quiz(questions)
+        val quiz = Quiz(questions)
+        question.text = quiz.questions[questionNumber-1].question
 
         leftButton.setOnClickListener {
             questionNumber++
-            questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
+            if(questionNumber<11) {
+                questionNumSentence.text = resources.getString(R.string.question_num) + " " + questionNumber
+                question.text = quiz.questions[questionNumber - 1].question
 
+            }
+            else{
+                rightButton.visibility=INVISIBLE
+                leftButton.visibility=INVISIBLE
+                question.visibility= INVISIBLE
+                questionNumSentence.visibility= INVISIBLE
+                correctNum.textSize = 50F
+            }
         }
         rightButton.setOnClickListener {
             questionNumber++
-            questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
+            if(questionNumber<11) {
+                questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
+                question.text = quiz.questions[questionNumber-1].question
 
+            }
+            else{
+                rightButton.visibility= INVISIBLE
+                leftButton.visibility= INVISIBLE
+                question.visibility= INVISIBLE
+                questionNumSentence.visibility= INVISIBLE
+                correctNum.textSize = 50F
+            }
         }
 
 

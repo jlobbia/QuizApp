@@ -1,4 +1,4 @@
-package com.jaden.quizapp
+package com.jaden.quizapp.dataclasses
 
 
 data class Question (
