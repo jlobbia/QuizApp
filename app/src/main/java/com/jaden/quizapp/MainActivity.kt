@@ -26,22 +26,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         titletext = findViewById(R.id.titletext)
-        titletext.text = "Quiz App"
+        titletext.text = resources.getString(R.string.app_name)
 
         questionNumSentence = findViewById(R.id.QuestionNum)
-        questionNumSentence.text = "Question: $questionNumber"
+        questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
 
         leftButton = findViewById(R.id.leftButton)
-        leftButton.text = "TRUE"
+        leftButton.text = resources.getString(R.string.button_true)
 
         rightButton = findViewById(R.id.rightButton)
-        rightButton.text = "FALSE"
+        rightButton.text = resources.getString(R.string.button_false)
 
         question = findViewById(R.id.question)
-        question.text = "QUESTION HERE"
+        question.text = resources.getString(R.string.question_here)
 
         correctNum = findViewById(R.id.correctNum)
-        correctNum.text = "Score: $score"
+        correctNum.text = resources.getString(R.string.score) + " " +score
 
 
 
@@ -54,29 +54,27 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate: $jsonText")
 
         val list = listOf("Question 1")
-
+/*
         val gson = Gson()
         val jsonString = gson.toJson(list)
-    val type = object : TypeToken<List<Question>>() { }.type
+        val type = object : TypeToken<List<Question>>() { }.type
         val questions = gson.fromJson<List<Question>>(jsonString, type)
-        Log.d(TAG, "onCreate: \n${questions.toString()}")
+        Log.d(TAG, "onCreate: \n${questions.toString()}") */
 
         //val quiz = Quiz(questions)
 
         leftButton.setOnClickListener {
             questionNumber++
-            questionNumSentence.text = "Question: $questionNumber"
+            questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
 
         }
         rightButton.setOnClickListener {
             questionNumber++
-            questionNumSentence.text = "Question: $questionNumber"
+            questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
 
         }
 
-        fun showScore {
-            if(questionNumber >= questions.size)
-        }
+
 
 
     }
