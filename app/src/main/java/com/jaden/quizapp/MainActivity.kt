@@ -16,8 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var titletext : TextView
     lateinit var questionNumSentence : TextView
-    var questionNumber = 1
-    var score = 0
+    var questionNumber = 0
     lateinit var leftButton : Button
     lateinit var rightButton: Button
     lateinit var question : TextView
@@ -44,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         question.text = resources.getString(R.string.question_here)
 
         correctNum = findViewById(R.id.correctNum)
-        correctNum.text = resources.getString(R.string.score) + " " +score
+        correctNum.text = resources.getString(R.string.score) + " " +0
 
 
 
@@ -65,13 +64,16 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate: \n${questions.toString()}")
 
         val quiz = Quiz(questions)
-        question.text = quiz.questions[questionNumber-1].question
+        question.text = quiz.questions[questionNumber].question
 
         leftButton.setOnClickListener {
-            questionNumber++
-            if(questionNumber<11) {
+            if(questionNumber<9) {
+
+                quiz.checkAnswer(true,quiz.questions[questionNumber].answer)
+                correctNum.text=quiz.score.toString()
+                questionNumber++
                 questionNumSentence.text = resources.getString(R.string.question_num) + " " + questionNumber
-                question.text = quiz.questions[questionNumber - 1].question
+                question.text = quiz.questions[questionNumber].question
 
             }
             else{
@@ -83,11 +85,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         rightButton.setOnClickListener {
-            questionNumber++
-            if(questionNumber<11) {
-                questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
-                question.text = quiz.questions[questionNumber-1].question
 
+            if(questionNumber<9) {
+
+                quiz.checkAnswer(false, quiz.questions[questionNumber].answer)
+                correctNum.text = quiz.score.toString()
+                questionNumber++
+                questionNumSentence.text = resources.getString(R.string.question_num)+" "+questionNumber
+                question.text = quiz.questions[questionNumber].question
             }
             else{
                 rightButton.visibility= INVISIBLE

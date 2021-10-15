@@ -1,0 +1,42 @@
+[
+  {
+    "question" : "Lekpz M41 'ブルドッグ’　は156ミリメートルの帯方を使います。 ",
+    "answer" : false
+  },
+  {
+    "question" : "BF109 ナチ戦闘機のエンジンは、ダイムラーベンズが作りました。",
+    "answer" : true
+  },
+  {
+    "question" : "けん銃はふつうに１０ミリメートルの玉を使います。",
+    "answer" : false
+  },
+  {
+    "question" : "アメリカのUH1’ベルヒウイー’は２０MMのミニガンを使いました。",
+    "answer" : true
+  },
+  {
+    "question": "AH1F ’スーパーコブラ’はヴェトナムで使われていました。",
+    "answer": false
+  },
+  {
+    "question" : "FW190 ’フォケウルフ’はレデアルエンジンを使いました。",
+    "answer" : true
+  },
+  {
+    "question" : "UH1C　’ヒウイーホッグ’はメシュスクリーンフィルターを使います。",
+    "answer" : true
+  },
+  {
+    "question" : "UH1Y ’ヴェノム’はヴェトナムで使われていました。",
+    "answer" : false
+  },
+  {
+    "question" : "DeHavilland ’ホルネット’はアフガニスタンでよく使われていました。",
+    "answer" : false
+  },
+  {
+    "question" : "Toe Popper'はよくヴェトナムでアメリカの軍に使われていました。",
+    "answer" : false
+  }
+]

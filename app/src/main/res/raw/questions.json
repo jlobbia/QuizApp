@@ -16,7 +16,7 @@
     "answer" : true
   },
   {
-    "question": "The AH1F Cobra was used in Vietnam as a light attack helicopter.",
+    "question": "The AH1F SuperCobra was used in Vietnam as a light attack helicopter.",
     "answer": false
   },
   {
@@ -37,6 +37,6 @@
   },
   {
     "question" : "The 'toe popper' was used widely against US forces by the Vietnamese.",
-    "answer" : true
+    "answer" : false
   }
 ]

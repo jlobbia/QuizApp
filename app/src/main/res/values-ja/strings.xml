@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">クイズーアップ</string>
+    <string name="button_true">正しい</string>
+    <string name="button_false">薄の</string>
+    <string name="question_here">問題ここ</string>
+    <string name="score">点数</string>
+    <string name="question_num">問題番号:</string>
+</resources>
